@@ -12,7 +12,11 @@
 ### Opcional:
 - Devolver solo a los usuarios mayor de edad mediante un pedido **GET** a la ruta `/usuarios/mayores`
 - Devolver a los usuarios que pertenezcan a un pais en especifico mediante un pedido **GET** a la ruta `/usuarios/:pais` 
-<!-- ":pais" para poder utilizar este parametro pueden trabajar con req.params a la hora de hacer su peticion -->
+
+### Tutoria 24 de Octubre
+- Implementamos la limitación para consultas de tipo GET
+- Implementamos ORDER BY utilizando pg-format
+
 ## Rutas:
 - `/usuarios` para todos los usuarios
 - `/usuarios/mayores` para los usuarios mayores de edad

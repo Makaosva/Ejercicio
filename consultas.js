@@ -32,16 +32,17 @@ const agregarUsuario = async (nombre, apellido, edad, pais) => {
 
 const obtenerUsuario = async ({ limit = 5, order_by = "id_ASC" }) => {
   //const consulta = "SELECT * FROM usuarios LIMIT $1;";
-  const [nombre] = order_by.split("_");
+  const [nombre, orden] = order_by.split("_");
 
   const formattedQuery = format(
-    "SELECT * FROM usuarios ORDER BY %s LIMIT %s",
+    "SELECT * FROM usuarios ORDER BY %s %s LIMIT %s",
     nombre,
+    orden,
     limit
   );
 
   const { rows: clientes } = await pool.query(formattedQuery);
-  console.log(nombre);
+  console.log(orden);
   //console.log(clientes);
   return clientes;
 };
